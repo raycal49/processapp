@@ -1,0 +1,31 @@
+﻿using static processor.Blocks.UpperCaseBlock;
+
+namespace processor.Tests;
+
+public class UpperCaseBlockTests { 
+  [Test]
+  public void Canary() {
+    Assert.True(true);
+  }
+
+  [Test]
+  public void UpperCaseBlock_TakesInLowerCaseChar_ReturnsUpperCaseChar() { 
+    var expectedResult = ConvertToUpper('a');
+
+    Assert.AreEqual('A', expectedResult);
+  }
+
+  [Test]
+  public void UpperCaseBlock_TakesInUpperCaseChar_ReturnsUpperCaseChar() { 
+    var expectedResult = ConvertToUpper('A');
+
+    Assert.AreEqual('A', expectedResult);
+  }
+
+  [Test]
+  public void UpperCaseBlock_TakesInSpecialChar_ReturnsSpecialChar() { 
+    var expectedResult = ConvertToUpper('!');
+
+    Assert.AreEqual('!', expectedResult);
+  }
+}

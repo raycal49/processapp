@@ -1,0 +1,7 @@
+namespace processor.Blocks;
+
+public static class CharacterBlocker {
+  public static string BlockCharacter(char character, char charToBlock) {
+    return character == charToBlock ? string.Empty : character.ToString();
+  }
+}

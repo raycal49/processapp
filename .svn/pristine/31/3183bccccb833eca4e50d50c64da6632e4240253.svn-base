@@ -1,0 +1,8 @@
+﻿namespace processor.Blocks;
+
+public static class KLowerCaseBlockerBlock {
+  public static string BlockLowerCaseK(char character) {
+    return character.ToString().Replace("k", "");
+//Feedback: let's keep it DRY
+  }
+}

@@ -1,0 +1,13 @@
+﻿using processor.Blocks;
+using static processor.BlockSelector;
+
+namespace processor.Tests;
+
+public class BlockSelectorTests {
+  [Test]
+  public void SelectBlocks_TakesInStringLowerCaseBlock_ReturnsListWithConvertToLowerFunction() {
+    var expectedResult = SelectBlocks("LowerCaseBlock"); //Feedback: is this actionResult or expectedResult?
+
+    Assert.AreEqual(LowerCaseBlock.ConvertToLower, expectedResult);
+  }
+}

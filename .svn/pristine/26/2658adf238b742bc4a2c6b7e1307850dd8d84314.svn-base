@@ -1,0 +1,8 @@
+﻿namespace processor.Blocks;
+
+public static class ZLowerCaseBlockerBlock {
+  public static string BlockLowerCaseZ(char character) {
+    return character.ToString().Replace("z", "");
+//Feedback: let's keep it DRY    
+  }
+}

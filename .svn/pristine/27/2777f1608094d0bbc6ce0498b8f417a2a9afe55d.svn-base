@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using processor;
+
+namespace processor.UI;
+
+class CharacterBlockApp {
+  static void Main(string[] args) {
+    Console.WriteLine("Welcome to the Processor App!");
+    
+    var blocks = LoadBlocks("../blocks.config");
+
+    string inputText = GetInputText();
+
+    if (string.IsNullOrEmpty(inputText)) {
+      Console.WriteLine("No text entered.");
+      return;
+    }
+
+    string result = ProcessInputText(inputText, blocks);
+
+    DisplayResult(result);
+  }
+
+  private static List<Func<char, string>> LoadBlocks(string configFilePath) {
+    var blockNames = File.ReadAllLines(configFilePath);
+    var blocks = new List<Func<char, string>>();
+
+    foreach (var blockName in blockNames) {
+      blocks.Add(BlockSelector.SelectBlocks(blockName));
+    }
+
+    return blocks;
+  }
+
+  private static string GetInputText() {
+    Console.WriteLine("\nEnter text to process: ");
+    return Console.ReadLine() ?? string.Empty;
+  }
+
+  private static string ProcessInputText(string inputText, List<Func<char, string>> blocks) {
+    return Processor.ProcessText(inputText, blocks.ToArray());
+  }
+
+  private static void DisplayResult(string result) {
+    Console.WriteLine($"\nProcessed text: {result}");
+  }
+}

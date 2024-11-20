@@ -1,0 +1,27 @@
+﻿using static processor.Blocks.CharacterBlocker;
+
+namespace processor.Tests;
+
+public class CharacterBlockerTests {
+  [Test]
+  public void BlockCharacter_TakesCharInputAndComparesToBlockedCharAndAreEqual_ReturnsEmptyString() {
+    var blockedChar = 'a';
+    var blockCharacterFunc = BlockCharacter(blockedChar);
+    var charInput = 'a';
+
+    var expectedResult = blockCharacterFunc(charInput);
+
+    Assert.AreEqual("", expectedResult);
+  }
+
+  [Test]
+  public void BlockCharacter_TakesCharInputAndComparesToBlockedCharAndAreNotEqual_ReturnsCharAsString() {
+    var blockedChar = 'a';
+    var blockCharacterFunc = BlockCharacter(blockedChar);
+    var charInput = 'b';
+
+    var expectedResult = blockCharacterFunc(charInput);
+
+    Assert.AreEqual("b", expectedResult);
+  }
+}

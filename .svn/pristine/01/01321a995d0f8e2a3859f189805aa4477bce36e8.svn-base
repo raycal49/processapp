@@ -1,0 +1,7 @@
+﻿namespace processor.Blocks;
+
+public static class ZUpperCaseBlockerBlock {
+  public static string BlockUpperCaseZ(char character) {
+    return character.ToString().Replace("Z", "");
+  }
+}

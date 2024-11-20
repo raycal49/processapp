@@ -1,0 +1,11 @@
+﻿using System.Reflection;
+
+namespace processor;
+
+public static class BlockSelector {
+  public static Func<char, string> SelectBlocks(string block) {
+    var blockMethod = Type.GetType($"processor.Blocks.{block}").GetMethods(BindingFlags.Public|BindingFlags.Static).Single();
+
+    return (Func<char, string>)Delegate.CreateDelegate(typeof(Func<char, string>), blockMethod);
+  }
+}

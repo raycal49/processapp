@@ -1,0 +1,33 @@
+﻿using static processor.Blocks.ZLowerCaseBlock;
+
+namespace processor.Tests;
+
+public class ZLowerCaseBlockerBlock {
+  [Test]
+  public void BlockLowerCaseZ_TakesInLowerCaseNonZChar_ReturnsSameLowerCaseNonZChar() {
+    var expectedResult = BlockLowerCaseZ('a');
+
+    Assert.AreEqual('a', expectedResult);
+  }
+
+  [Test]
+  public void BlockLowerCaseZ_TakesInLowerCaseZ_ReturnsNull() {
+    var expectedResult = BlockLowerCaseZ('z');
+
+    Assert.AreEqual('\0', expectedResult); //Feedback: no need for \0
+  }
+
+  [Test]
+  public void BlockLowerCaseZ_TakesInUpperCaseZ_ReturnsUpperCaseZ() {
+    var expectedResult = BlockLowerCaseZ('Z');
+
+    Assert.AreEqual('Z', expectedResult);
+  }
+
+  [Test]
+  public void BlockLowerCaseZ_TakesInSpecialChar_ReturnsSpecialChar() {
+    var expectedResult = BlockLowerCaseZ('!');
+
+    Assert.AreEqual('!', expectedResult);
+  }
+}

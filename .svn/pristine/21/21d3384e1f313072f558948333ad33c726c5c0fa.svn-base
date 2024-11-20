@@ -1,0 +1,7 @@
+﻿namespace processor;
+
+public static class Processor {
+  public static string ProcessText(string text, Func<char, string> blockFunc) { //Feedback: block instead of blockFunc
+    return string.Concat(text.Select(character => blockFunc(character)));
+  }
+}

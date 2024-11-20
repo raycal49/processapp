@@ -1,0 +1,26 @@
+﻿using static processor.Blocks.MultiplierBlock;
+
+namespace processor.Tests;
+
+public class MultiplierBlockTests {
+  [Test]
+  public void MultiplierBlock_TakesInLowerCaseChar_ReturnsTwoOfSameLowerCaseChar() {
+    var expectedResult = DoubleCharacter('a');
+
+    CollectionAssert.AreEqual(new[] {'a', 'a'}, expectedResult);
+  }
+
+  [Test]
+  public void MultiplierBlock_TakesInUpperCaseChar_ReturnsTwoOfSameUpperCaseChar() {
+    var expectedResult = DoubleCharacter('A');
+
+    CollectionAssert.AreEqual(new[] { 'A', 'A' }, expectedResult);
+  }
+
+  [Test]
+  public void MultiplierBlock_TakesInSpecialChar_ReturnsTwoOfSameSpecialChar() {
+    var expectedResult = DoubleCharacter('!');
+
+    CollectionAssert.AreEqual(new[] { '!', '!' }, expectedResult);
+  }
+}

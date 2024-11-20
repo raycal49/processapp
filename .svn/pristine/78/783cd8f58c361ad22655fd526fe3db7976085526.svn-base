@@ -1,0 +1,18 @@
+x canary
+
+x convertToUpper takes in a char and returns uppercase character
+x given an upper-case letter UpperCase returns upper-case letter
+x given a non-letter symbol UpperCase returns the same symbol
+
+x convertToLower takes in a lower case char and returns a lower case char
+x convertToLower takes in an upper case char and returns a lower case char
+x convertToLower takes a non-letter symbol and returns the same symbol
+
+x multiplierBlock takes in a lowercase char and returns two of the same lowercase chars
+x multiplierBlock takes in an uppercase char and returns two of the same uppercase chars
+x multiplierBlock takes in a non-letter char and returns two of the same non-letter chars
+
+x BlockLowerCaseZ takes in a lowercase non-z char and returns same lowercase non-z char
+x BlockLowerCaseZ takes in lowercase z and returns null
+x BlockLowerCaseZ takes in uppercase char and returns same uppercase char #Feedback: instead how about Z here?
+x BlockLowerCaseZ takes in special char and returns same special char

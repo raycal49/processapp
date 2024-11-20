@@ -1,0 +1,7 @@
+﻿namespace processor.Blocks;
+
+public static class UpperCaseBlock { 
+  public static char convertToUpper(char character) {
+    return char.ToUpper(character);
+  }
+}

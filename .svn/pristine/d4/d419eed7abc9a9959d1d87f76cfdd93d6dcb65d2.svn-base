@@ -1,0 +1,8 @@
+﻿namespace processor.Blocks;
+
+public static class MultiplierBlock {
+  public static string DoubleCharacter(char character) {
+    return new string(new char[] { character, character });
+    //Feedback: return $"{character}{character}";
+  }
+}

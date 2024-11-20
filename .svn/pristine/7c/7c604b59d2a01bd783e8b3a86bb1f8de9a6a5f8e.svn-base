@@ -1,0 +1,33 @@
+﻿using static processor.Blocks.KLowerCaseBlockerBlock;
+
+namespace processor.Tests;
+
+public class KLowerCaseBlockerBlock {
+  [Test]
+  public void BlockLowerCaseK_TakesInLowerCaseNonKChar_ReturnsLowerCaseNonKString() {
+    var expectedResult = BlockLowerCaseK('a');
+
+    Assert.AreEqual("a", expectedResult);
+  }
+
+  [Test]
+  public void BlockLowerCaseK_TakesInLowerCaseK_ReturnsEmptyString() {
+    var expectedResult = BlockLowerCaseK('k');
+
+    Assert.AreEqual("", expectedResult);
+  }
+
+  [Test]
+  public void BlockLowerCaseK_TakesInUpperCaseK_ReturnsUpperCaseKString() {
+    var expectedResult = BlockLowerCaseK('K');
+
+    Assert.AreEqual("K", expectedResult);
+  }
+
+  [Test]
+  public void BlockLowerCaseK_TakesInSpecialChar_ReturnsSpecialString() {
+    var expectedResult = BlockLowerCaseK('!');
+
+    Assert.AreEqual("!", expectedResult);
+  }
+}

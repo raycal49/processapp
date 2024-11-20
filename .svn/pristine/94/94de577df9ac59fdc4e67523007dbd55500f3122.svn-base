@@ -1,0 +1,9 @@
+x canary
+
+x convertToUpper takes in a char and returns uppercase character
+x given an upper-case letter UpperCase returns upper-case letter
+x given a non-letter symbol UpperCase returns the same symbol
+
+x convertToLower takes in a lower case char and returns a lower case char
+x convertToLower takes in an upper case char and returns a lower case char
+x convertToLower takes a non-letter symbol and returns the same symbol

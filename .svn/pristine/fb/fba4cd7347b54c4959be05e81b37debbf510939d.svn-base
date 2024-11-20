@@ -1,0 +1,44 @@
+x canary
+
+x convertToUpper takes in a char and returns uppercase character
+x given an upper-case letter UpperCase returns upper-case letter
+x given a non-letter symbol UpperCase returns the same symbol
+
+x ConvertToLower takes in a lower case char and returns a lower case char
+x ConvertToLower takes in an upper case char and returns a lower case char
+x ConvertToLower takes a non-letter symbol and returns the same symbol
+
+x DoubleCharacter takes in a lowercase char and returns two of the same lowercase chars
+x DoubleCharacter takes in an uppercase char and returns two of the same uppercase chars
+x DoubleCharacter takes in a non-letter char and returns two of the same non-letter chars
+
+x BlockLowerCaseZ takes in a lowercase non-z char and returns lowercase non-z string
+x BlockLowerCaseZ takes in lowercase z and returns empty string
+x BlockLowerCaseZ takes in uppercase Z and returns uppercase Z string
+x BlockLowerCaseZ takes in special char and returns special string
+
+x BlockUpperCaseZ takes in an uppercase non-z char and returns uppercase non-z string
+x BlockUpperCaseZ takes in lowercase z and returns lowercase z string
+x BlockUpperCaseZ takes in uppercase Z and returns empty string
+x BlockUpperCaseZ takes in special char and returns special string
+
+x BlockLowerCaseK takes in a lowercase non-k char and returns lowercase non-k string
+x BlockLowerCaseK takes in lowercase k and returns empty string
+x BlockLowerCaseK takes in uppercase k and returns uppercase k string
+x BlockLowerCaseK takes in special char and returns special string
+
+x BlockCharacter takes in char and char is equal to blockedChar and returns empty string
+x BlockCharacter takes in char and char isnt equal to blockedChar and returns char as string
+
+x ProcessText takes in a string and no block function and returns the same string
+x ProcessText takes in a string and ConvertToLower func and returns lowercase string
+
+x process_text takes string and uppercase block, returns string in uppercase
+x process_text takes string and multiplier block, returns string with letters repeated
+x process_text takes two blocks applies the first, and then the second block
+
+//Feedback: more tests
+- processor takes string "abzde" and uppercase block and Z blocker
+- processor takes string "abzde" and Z blocker and uppercase
+- processor takes string "abzde" and uppercase and multiplier
+- processor takes string "abzde" and Z blocker, uppercase, and multiplier

@@ -1,0 +1,7 @@
+﻿namespace processor.Blocks;
+
+public static class MultiplierBlock {
+  public static char[] DoubleCharacter(char character) { //Feedback: this is going to cause issues due to incompatibility of return type between this Block and the other blocks
+    return new char[] { character, character };
+  }
+}

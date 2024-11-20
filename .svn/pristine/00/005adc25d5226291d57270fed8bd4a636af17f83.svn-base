@@ -1,0 +1,12 @@
+namespace processor.Blocks;
+
+public static class CharacterBlocker {
+  public static string BlockCharacter(char charInput, char blockedChar) {
+    return charInput == blockedChar ? string.Empty : charInput.ToString();
+  }
+  
+  //Feedback: how about
+  //public static Func<char, string> BlockCharacter(char blockedChar) {
+  //  return (char charInput) => charInput == blockedChar ? string.Empty : charInput.ToString();
+  //}
+}

@@ -1,0 +1,21 @@
+﻿using processor.Blocks;
+using static processor.Processor;
+
+namespace processor.Tests;
+
+public class ProcessorTests {
+  [Test]
+  public void ProcessText_TakesInStringAndAppliesNoBlocks_ReturnsSameString()
+  {
+    var expectedResult = ProcessText("test", character => character.ToString());
+
+    Assert.AreEqual("test", expectedResult);
+  }
+
+  [Test]
+  public void ProcessText_TakesInStringAndAppliesLowerCaseBlock_ReturnsLowerCaseString() {
+    var expectedResult = ProcessText("TEST", LowerCaseBlock.ConvertToLower);
+
+    Assert.AreEqual("test", expectedResult);
+  }
+}

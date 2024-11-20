@@ -1,0 +1,18 @@
+﻿namespace processor;
+
+public static class Processor {
+  public static string ProcessText(string text) {
+    return ProcessText(text, character => character.ToString());
+  }
+  /* we can remove this method since we use the params keyword in the next method which can also handle single blocks
+
+  public static string ProcessText(string text, Func<char, string> block) {
+    return string.Concat(text.Select(character => block(character)));
+  }
+*/
+  public static string ProcessText(string text, params Func<char, string>[] blocks) {
+    return string.Concat(text.Select(character => 
+    blocks.Aggregate(character.ToString(), (current, block) => block(current[0]))
+    ));
+  }
+}
